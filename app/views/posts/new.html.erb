@@ -1,2 +1,12 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<h1>つぶやき投稿</h1>
+
+<%= form_with(model: @post, local: true) do |f| %>
+    <div class = "field">
+        <%= f.text_field :content %>
+    </div>
+
+    <div class = "action">
+        <input type = "submit" value = "投稿" >
+    </div>
+
+<% end %>
